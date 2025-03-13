@@ -1,13 +1,13 @@
 language = [
-    'a', # American English 🇺🇸
-    'b', # British English 🇬🇧
-    'z', # Mandarin Chinese 🇨🇳 pip install misaki[zh]
-    'e', # Spanish 🇪🇸 
-    'j', # Japanese 🇯🇵 pip install misaki[ja]
-    'f', # French 🇫🇷 
-    'h', # Hindi 🇮🇳 
-    'i', # Italian 🇮🇹 
-    'p', # Brazilian Portuguese 🇧🇷 
+    'American English', # American English 🇺🇸
+    'British English', # British English 🇬🇧
+    'Mandarin Chinese', # Mandarin Chinese 🇨🇳 pip install misaki[zh]
+    'Spanish', # Spanish 🇪🇸 
+    'Japanese', # Japanese 🇯🇵 pip install misaki[ja]
+    'French', # French 🇫🇷 
+    'Hindi', # Hindi 🇮🇳 
+    'Italian', # Italian 🇮🇹 
+    'Brazilian Portuguese', # Brazilian Portuguese 🇧🇷 
 ]
 
 

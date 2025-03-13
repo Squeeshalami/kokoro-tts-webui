@@ -4,6 +4,9 @@ from voices import voices, language
 import uvicorn
 import threading
 import time
+from kokoro_api import generate_tts, TTSRequest
+from utils import get_language_code
+
 
 API_PORT = 12345
 
@@ -17,12 +20,12 @@ fastapi_thread.start()
 # Wait a moment for the server to start
 time.sleep(2)
 
-def generate_speech(text, voice, language_code, speed):
+def generate_speech(text, voice, language, speed):
     # Prepare the request payload
     payload = {
         "text": text,
         "voice": voice,
-        "language": language_code,
+        "language": get_language_code(language),
         "speed": speed
     }
     
@@ -37,11 +40,12 @@ def generate_speech(text, voice, language_code, speed):
     else:
         raise gr.Error(f"Error generating speech: {response.status_code}")
 
+
 # Create voice options grouped by language
 voice_choices = []
 for lang_code in language:
     # Filter voices for current language code
-    lang_voices = [v for v in voices if v.startswith(lang_code)]
+    lang_voices = [v for v in voices if v.startswith(get_language_code(lang_code))]
     if lang_voices:
         voice_choices.extend(lang_voices)
 
