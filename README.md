@@ -47,10 +47,11 @@ The project consists of:
    ```
 
    ForWindows:
-   ```
+   
    https://github.com/espeak-ng/espeak-ng/releases
-   ```
+
    For more information on windows installation, see:
+   
    https://github.com/espeak-ng/espeak-ng/blob/master/docs/guide.md
 
    Note: For Chinese language support, run: `pip install misaki[zh]`
