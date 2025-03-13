@@ -23,23 +23,7 @@ The project consists of:
    cd kokoro-tts-webui
    ```
 
-2. Create and activate a virtual environment:
-   ```
-   # Linux
-   python -m venv .venv
-   source .venv/bin/activate
-   
-   # Windows
-   python -m venv .venv
-   .venv\Scripts\activate
-   ```
-
-3. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-
-
-4. Install espeak-ng 
+2. Install espeak-ng 
    
    For Linux:
    ```
@@ -54,8 +38,21 @@ The project consists of:
    
    https://github.com/espeak-ng/espeak-ng/blob/master/docs/guide.md
 
-   Note: For Chinese language support, run: `pip install misaki[zh]`
-   For Japanese language support, run: `pip install misaki[ja]`
+3. Create and activate a virtual environment:
+   ```
+   # Linux
+   python -m venv .venv
+   source .venv/bin/activate
+   
+   # Windows
+   python -m venv .venv
+   .venv\Scripts\activate
+   ```
+
+4. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 

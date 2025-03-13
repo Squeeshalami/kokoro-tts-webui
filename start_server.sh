@@ -10,4 +10,4 @@ PORT="12345"
 echo "Starting FastAPI server on $HOST:$PORT"
 
 
-uvicorn "$MODULE_NAME" --host "$HOST" --port "$PORT" --reload
+uvicorn "$MODULE_NAME" --host "$HOST" --port "$PORT"
