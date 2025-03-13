@@ -7,6 +7,8 @@ from pydantic import BaseModel
 from fastapi.responses import StreamingResponse
 from kokoro import KPipeline
 
+#Global Pipeline Cache
+pipeline_cache = {}
 
 class TTSRequest(BaseModel):
     text: str
@@ -31,16 +33,20 @@ def generate_tts(request: TTSRequest):
     }
     and returns a WAV audio file as a streaming response.
     """
+    # Check if pipeline is already cached
+    global pipeline_cache
+    cache_key = f"{request.language}_{device}"
 
-    pipeline = KPipeline(
-        lang_code=request.language,
-        device=device
-    )
+    if cache_key not in pipeline_cache:
+        pipeline_cache[cache_key] = KPipeline(lang_code=request.language, device=device)
+        print(f"Created new pipeline for language: {request.language}")
+
+    pipeline = pipeline_cache[cache_key]
 
     # A) Run pipeline => yields segments (text, phonemes, audio_array)
     segments = pipeline(
         request.text,
-        voice=request.voice,  # Remove the language parameter
+        voice=request.voice,
         speed=request.speed,
         split_pattern=r'\n+'
     )
