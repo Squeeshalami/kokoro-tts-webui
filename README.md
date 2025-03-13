@@ -133,7 +133,7 @@ For a complete list of available voices, see the `voices.py` file.
 
 ## License
 
-[Include your license information here]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
