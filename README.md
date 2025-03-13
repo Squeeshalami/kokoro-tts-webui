@@ -25,7 +25,7 @@ The project consists of:
 
 2. Create and activate a virtual environment:
    ```
-   # Linux/macOS
+   # Linux
    python -m venv .venv
    source .venv/bin/activate
    
@@ -37,7 +37,21 @@ The project consists of:
 3. Install the required dependencies:
    ```
    pip install -r requirements.txt
+
+
+4. Install espeak-ng 
+   
+   For Linux:
    ```
+   sudo apt-get install espeak-ng
+   ```
+
+   ForWindows:
+   ```
+   https://github.com/espeak-ng/espeak-ng/releases
+   ```
+   For more information on windows installation, see:
+   https://github.com/espeak-ng/espeak-ng/blob/master/docs/guide.md
 
    Note: For Chinese language support, run: `pip install misaki[zh]`
    For Japanese language support, run: `pip install misaki[ja]`
@@ -46,7 +60,7 @@ The project consists of:
 
 ### Web Interface
 
-1. Start the application:
+1. Run the Gradio web interface:
    ```
    python app.py
    ```
