@@ -1,6 +1,6 @@
 # Simple Kokoro-TTS WebUI
 
-An easy to use Text-to-Speech (TTS) application built with Kokoro, FastAPI, and Gradio.
+An easy to use Text-to-Speech (TTS) application built with Kokoro-82M, FastAPI, and Gradio.
 
 ## Overview
 
