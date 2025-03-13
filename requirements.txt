@@ -1,0 +1,6 @@
+gradio
+kokoro>=0.8.4
+uvicorn
+torch
+soundfile
+fastapi
