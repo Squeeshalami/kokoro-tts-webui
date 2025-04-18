@@ -143,9 +143,6 @@ For a complete list of available voices, see the `voices.py` file.
 - If the web interface doesn't load, check that both the FastAPI server and Gradio interface are running.
 - On Windows, if you get "Access is denied" errors when running the batch file, try running Command Prompt as administrator.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
